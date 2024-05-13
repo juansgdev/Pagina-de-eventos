@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: large;
+    font-family: 'Lora', serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* DEFININDO ÁREAS DE CADASTRO E LOGIN */
+
+#switchForm {
+    display: none;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.sigInLogIn {
+    width: 95%;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.40);
+}
+
+.sigInLogInArea {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+.sigInLogInArea:last-child {
+    border-left: 1px gray solid;
+}
+
+.sigInLogInButton {
+    border: gray solid 2px;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 5px;
+    transition: all 0.2s;
+}
+
+.sigInLogInButton:hover {
+    box-shadow: 0px 0px 2px 2px gray;
+}
+
+/* DEFININDO ESTILIZAÇÃO DO FORMULÁRIO */
+
+form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+form input, select {
+    border: 2px gray solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+form button {
+    padding: 5px;
+    width: 120px;
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+span button {
+    padding: 0;
+    margin: 0;
+    width: 22px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ESTILIZANDO DASHBOARD */
+
+/* NAVBAR */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.nav h1 {
+    margin: 10px;
+}
+
+#navModal {
+    display: none;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    flex-direction: column;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    gap: 15px;
+}
+
+#navModal span {
+    display: flex;
+    gap: 0 10px;
+    font-weight:900;
+}
+
+#navModal p {
+    font-weight: initial;
+}
+
+.userMenu {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-right: 10px;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.userMenu p {
+    font-size: 28px;
+}
+
+.userMenu img {
+    width: 32px;
+    height: 32px;
+}
+
+#closeModal {
+    border: 0;
+    background-color: white;
+    height: 20px;
+    margin: auto 0;
+    margin-left: auto;
+}
+
+#closeModal img {
+    width: 20px;
+    height: 20px;
+}
+
+#closeUser {
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100px;
+}
+
+/* ESTILIZANDO MENU DE CRIAR EVENTOS */
+
+#menuOrganizacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    background-color: white;
+    margin: 10px;
+    padding: 5px;
+    width: 220px;
+    margin-left: auto;
+    border: gray solid 2px;
+    border-radius: 30px;
+}
+
+#menuOrganizacao p {
+    font-size: x-large;
+    font-weight: 800;
+}
+
+.createEvent {
+    width: 40px;
+}
+
+/* ESTILIZANDO MAIN DO DASHBARD QUE CONTÉM TODOS OS EVENTOS */
+
+h1 {
+    font-size: 28px;
+}
+
+.main-title {
+    padding: 0px 20px 20px 20px;
+}
+
+#allEvents {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.cardEvent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    width: 45%;
+    margin-bottom: 40px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.cardEvent img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.updateFormButton {
+    border: 0;
+    border-radius: 10px;
+    width: 120px;
+    background-color: slategray;
+    color: white;
+    margin-left: auto;
+}
+
+/* ESTILIZANDO FORMULÁRIO DE ATUALIZAR EVENTOS */
+
+.updateEventForm {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 400px;
+    background-color: white;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.updateEventForm span {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.updateEventForm img {
+    width: 22px;
+}
+
+/* FAZENDO RESPONSIVIDADE DO FORMULÁRIO DE ATUALIZAR EVENTOS */
+
+@media screen and (max-height: 935px) {
+    .updateEventForm {
+        top: 20px;
+        width: 480px;
+        padding: 5px;
+        gap: 5px;
+        top: 5px;
+    }
+
+    .updateEventForm input {
+        height: 20px;
+        padding: 5px;
+    }
+}
